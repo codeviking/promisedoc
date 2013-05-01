@@ -1,0 +1,17 @@
+<?js
+var data = obj;
+?>
+<dl>
+    <?js if (data.resolvedwith && data.resolvedwith.length) { ?>
+        <dt>Resolved with:</dt>
+        <dd><?js= this.partial('params.tmpl', data.resolvedwith) ?></dd>
+    <?js } ?>
+    <?js if (data.rejectedwith && data.rejectedwith.length) { ?>
+        <dt>Rejected with:</dt>
+        <dd><?js= this.partial('params.tmpl', data.rejectedwith) ?></dd>
+    <?js } ?>
+    <?js if (data.notifiedwith && data.notifiedwith.length) { ?>
+        <dt>Notified with:</dt>
+        <dd><?js= this.partial('params.tmpl', data.notifiedwith) ?></dd>
+    <?js } ?>
+</dl>
