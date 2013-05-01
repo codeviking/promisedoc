@@ -73,6 +73,4 @@ property.
  * Currently I treat all parameters in the returns collection (multiple returns) as though they are promises.  I need
 to enhance this such that only the return values that are promises are actually tied to the promise documentation output.
 
- =====
-
- Feel free to file issues or reach out to me directly if you encounter issues.  Happy documenting!
+Feel free to file issues or reach out to me directly if you encounter issues.  Happy documenting!
