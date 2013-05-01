@@ -49,12 +49,10 @@ as is appropriate:
 	    <?js= this.partial('promise.tmpl', data.promise) ?>
 	</dd>
 <?js } ?>
-
+```
 
 Ultimately you can massage your output into whatever format you need.  Simply check out `promise.tmpl` for an example
 of how to parse and display the output.
-
-```
 
 ## Usage
 
