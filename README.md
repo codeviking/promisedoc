@@ -28,19 +28,19 @@ or after the @returns tag, but they've got to be in there.
 Edit your jsdoc configuration file and add a link pointing at the promise plugin:
 
 ```
-    "plugins": [
-        // .. other plugins
-        "./jsdoc3-plugins/promise"
-    ],
-
+"plugins": [
+    // .. other plugins
+    "./jsdoc3-plugins/promise"
+]
 ```
 
-You'll also want to edit your template to include the promise output.  I've included two sample plugins in the `templates`
+You'll also want to edit your template to include the promise output.  I've included two sample templates in the `templates`
 directory.
 
 The `promise.tmpl` is a self-standing template that outputs the promise documentation similar to method parameters.
 
-The `returns.tmpl` is an edited version of the default `returns.tmpl` that includes the following block:
+The `returns.tmpl` is an edited version of the default `returns.tmpl` that includes the `promise.tmpl` partial template 
+as is appropriate:
 
 ```
 <?js if (data.promise) { ?>
@@ -49,6 +49,11 @@ The `returns.tmpl` is an edited version of the default `returns.tmpl` that inclu
 	    <?js= this.partial('promise.tmpl', data.promise) ?>
 	</dd>
 <?js } ?>
+
+
+Ultimately you can massage your output into whatever format you need.  Simply check out `promise.tmpl` for an example
+of how to parse and display the output.
+
 ```
 
 ## Usage
